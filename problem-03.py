@@ -1,25 +1,19 @@
-import itertools
+def is_prime(n):
+    for i in xrange(2, n-1):
+        if n % i == 0:
+            return False
+    return True
 
 
-def prime(n):
-    if n > 2 and n % 2 == 0 or \
-       n > 3 and n % 3 == 0 or \
-       n > 5 and n % 5 == 0 or \
-       n > 7 and n % 7 == 0 or \
-       n > 13 and n % 13 == 0:
-        pass
-    else:
-        return n
+def list_primes(n):
+    return [x for x in xrange(2, n) if is_prime(x)]
+
+
+def list_prime_factors(n):
+    pl = list_primes(n)
+    pl2 = [x for x in pl if x * x < n]
+    return [x for x in pl2 if n % x == 0]
 
 
 def largest_prime_factor(n):
-    largest = None
-    for x in xrange(n):
-        if x > 0 and n % int(x) == 0 and prime(x):
-            if largest is None or x > largest:
-                largest = x
-    print "Largest is %d" % largest
-
-
-# largest_prime_factor(600851475143)
-largest_prime_factor(13195)
+    return max(list_prime_factors(n))
