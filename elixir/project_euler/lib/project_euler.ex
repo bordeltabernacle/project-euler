@@ -18,7 +18,8 @@ defmodule ProjectEuler do
 
   """
   @spec problem_one(integer()) :: integer()
-  def problem_one(n) do
+  def problem_one(n) when n <= 0, do: :error
+  def problem_one(n) when n > 0 do
     (for i <- 1..n-1, rem(i, 3) == 0 or rem(i, 5) == 0, do: i)
     |> Enum.sum
   end
@@ -40,7 +41,8 @@ defmodule ProjectEuler do
 
   """
   @spec problem_two(number()) :: number()
-  def problem_two(n) do
+  def problem_two(n) when n <= 0, do: :error
+  def problem_two(n) when n > 0 do
     Stream.unfold({0, 1}, fn {a, b} -> {a, {b, a + b}} end)
     |> Stream.filter(fn(x) -> rem(x, 2) == 0 end)
     |> Enum.take_while(fn(x) -> x < n end)

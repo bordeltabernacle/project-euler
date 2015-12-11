@@ -17,6 +17,11 @@ defmodule ProjectEulerTest do
   end
 
   # @tag :pending
+  test "problem one negative number" do
+    assert PE.problem_one(-1) == :error
+  end
+
+  # @tag :pending
   test "problem two small number" do
     assert PE.problem_two(100) == 44
   end
@@ -24,6 +29,11 @@ defmodule ProjectEulerTest do
   # @tag :pending
   test "problem two question" do
     assert PE.problem_two(4000000) == 4613732
+  end
+
+  # @tag :pending
+  test "problem two negative number" do
+    assert PE.problem_two(-1) == :error
   end
 
 end
