@@ -1,0 +1,1 @@
+sidebarNodes={"exceptions":[],"extras":[{"id":"api-reference","title":"API Reference","headers":[]}],"modules":[{"id":"ProjectEuler.One","title":"ProjectEuler.One","functions":[{"id":"sum_mul_three_five/1","anchor":"sum_mul_three_five/1"}]},{"id":"ProjectEuler.Two","title":"ProjectEuler.Two","functions":[{"id":"sum_even_fib/1","anchor":"sum_even_fib/1"}]}],"protocols":[]}

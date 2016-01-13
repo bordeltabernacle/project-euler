@@ -3,8 +3,11 @@ defmodule ProjectEuler.Mixfile do
 
   def project do
     [app: :project_euler,
-     version: "0.0.1",
-     elixir: "~> 1.1",
+     version: "0.0.2",
+     name: "Project Euler",
+     source_url: "https://github.com/bordeltabernacle/project-euler",
+     name: "Project Euler",
+     elixir: "~> 1.2",
      build_embedded: Mix.env == :prod,
      start_permanent: Mix.env == :prod,
      deps: deps]
