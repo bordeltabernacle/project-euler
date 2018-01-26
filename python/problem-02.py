@@ -7,5 +7,3 @@ def fibonacci(n):
 
 def sum_even_fibonacci(n):
     return sum(x for x in fibonacci(n) if not x % 2)
-
-print(sum_even_fibonacci(4000000))
